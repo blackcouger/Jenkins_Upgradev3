@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        maven 'LocalMaven' // Specify the name of the Maven installation in Jenkins
+    }
     stages {
         stage('Build Application') {
             steps {
