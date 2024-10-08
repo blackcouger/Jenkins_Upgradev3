@@ -12,6 +12,7 @@ pipeline {
                 success {
                     echo "Now Archiving the Artifacts...."
                     archiveArtifacts artifacts: '**/*.war'
+                    sh 'find . -name "*.war"'
                 }
             }
         }
